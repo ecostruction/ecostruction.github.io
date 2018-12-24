@@ -1,1 +1,50 @@
-hello world...
+---
+layout: default
+title: Ecostruction NY - Impressive Shield
+description: The best place in New York to get your countertops and glass top stoves protected.
+featured_image: /images/social.jpg
+---
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>Best protection for your kitchen
+		Protect your counters.</h1>
+		<p>A ceramic coating that protects your quartz, granite, and marble countertops. Wipe away stains with soap and water.</p>
+		<p>Coffee stains, crayons, even beets are no match!</p>
+
+	</div>
+
+</section>
+
+<section class="portfolio">
+
+	<div class="content-wrap portfolio-wrap">
+
+		{% for project in site.projects reversed %}
+
+		<div class="portfolio-item">
+
+			<a class="portfolio-item__link" href="{{ project.url }}">
+
+				<div class="portfolio-item__image">
+					<img src="{{ project.featured_image  }}" alt="{{ project.title }}">
+				</div>
+
+				<div class="portfolio-item__content">
+					<div class="portfolio-item__info">
+						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+					</div>
+				</div>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+
+	</div>
+
+</section>
